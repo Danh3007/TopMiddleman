@@ -1,0 +1,200 @@
+<%- include("../_layouts/header") %>
+<!-- Search Work -->
+
+<div class="row">
+    <div class="wow animate__fadeInDown col-sm-4 text-center" id="about4"><a>JOB-SEARCH</a></div>
+    <div class="wow animate__fadeInDown select-box col-sm-4">
+        <div class="options-container">
+            <div class="option">
+                <input type="radio" class="radio" id="automobiles" name="category" />
+                <label for="automobiles">Automobiles</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="film" name="category" />
+                <label for="film">Film & Animation</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="science" name="category" />
+                <label for="science">Science & Technology</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="art" name="category" />
+                <label for="art">Art</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="music" name="category" />
+                <label for="music">Music</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="travel" name="category" />
+                <label for="travel">Travel & Events</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="sports" name="category" />
+                <label for="sports">Sports</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="news" name="category" />
+                <label for="news">News & Politics</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="tutorials" name="category" />
+                <label for="tutorials">Tutorials</label>
+            </div>
+        </div>
+
+        <div class="selected">
+            Tất cả ngành
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Đầu bếp" />
+        </div>
+    </div>
+    <div class="wow animate__fadeInDown select-box col-sm-4">
+        <div class="options-container">
+            <div class="option">
+                <input type="radio" class="radio" id="automobiles" name="category" />
+                <label for="automobiles">Automobiles</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="film" name="category" />
+                <label for="film">Film & Animation</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="science" name="category" />
+                <label for="science">Science & Technology</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="art" name="category" />
+                <label for="art">Art</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="music" name="category" />
+                <label for="music">Music</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="travel" name="category" />
+                <label for="travel">Travel & Events</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="sports" name="category" />
+                <label for="sports">Sports</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="news" name="category" />
+                <label for="news">News & Politics</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" class="radio" id="tutorials" name="category" />
+                <label for="tutorials">Tutorials</label>
+            </div>
+        </div>
+
+        <div class="selected">
+            Tất cả ngành
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Đầu bếp" />
+        </div>
+    </div>
+</div>
+<hr id="hr-work">
+<div id="nb" data-wow-duration="1s">
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 0" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 3" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 6" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 9" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 12" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 15" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="wow animate__fadeInUp row">
+        <a href="#" ng-repeat="dl in vans | limitTo: 3 : 18" class="col-lg-4 col-md-4 col-sm-4 col-4" id="founder">
+            <div class="card" id="nbvans">
+                <img class="img-top img-thumbnail" src={{dl.img}} alt="VANS">
+                <div class="overlay text-center">
+                    <div class="title">{{dl.name}}</div>
+                    <div class="info">{{dl.info}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<%- include("../_layouts/footer") %>

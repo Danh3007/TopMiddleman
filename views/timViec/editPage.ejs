@@ -1,0 +1,33 @@
+<%- include("../_layouts/header") %>
+
+<div class="row">
+    <h1>Cập nhật bài đăng</h1>
+    <form method="POST" action="/timViec/<%=page._id%>">
+        <div class="form-group">
+            <p>Tên:</p>
+            <input type="text" value="<%= page.myName %> " name="myName" class="form-control" placeholder="Họ và tên" required />
+        </div>
+        <div class="form-group">
+            <p>Vị trí tuyển dụng:</p>
+            <input type="text" value="<%= page.viTri %> " name="viTri" class="form-control" placeholder="Vị trí tuyển dụng" required />
+        </div>
+        <div class="form-group">
+            <p>Giới thiệu bản thân:</p>
+            <textarea name="gioiThieu" placeholder="Giới thiệu bản thân" class="form-control" minlength="5" required><%= page.gioiThieu %> </textarea>
+        </div>
+        <div class="form-group">
+            <p>Mức lương Tối thiểu:</p>
+            <input type="number" value="<%= page.luong %>" name="luong" placeholder="Nhập mức lương tối thiểu" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <p>Thời gian làm việc:</p>
+            <select name="time">
+                <option value="partTime">Part-time</option>
+                <option value="fullTime">Full-time</option>
+            </select>
+        </div>
+        <button type="submit">Cập nhật</button>
+    </form>
+</div>
+
+<%- include("../_layouts/footer") %>

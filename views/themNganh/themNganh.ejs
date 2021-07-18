@@ -1,0 +1,22 @@
+<%- include("../_layouts/header") %>
+
+<div class="row">
+    <h1>Thêm ngành nghề</h1>
+    <form method="POST" action="/themNganh/signUp">
+        <div class="form-group">
+            <p>Tên ngành:</p>
+            <input type="text" name="nameNganh" class="form-control" placeholder="Tên Ngành" required />
+        </div>
+        <div class="form-group">
+            <p>giới thiệu:</p>
+            <input type="text" name="info" class="form-control" placeholder="Giới thiệu" required />
+        </div>
+        <div class="form-group">
+            <p>hình ảnh:</p>
+            <input type="text" name="imgSrc" class="form-control" placeholder="Hình ảnh" required />
+        </div>
+        <button type="submit">Đăng tin</button>
+    </form>
+</div>
+
+<%- include("../_layouts/footer") %>

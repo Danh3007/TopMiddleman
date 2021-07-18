@@ -1,0 +1,30 @@
+<%- include("../_layouts/header") %>
+
+<div class="row">
+    <h1>Cập nhật bài đăng</h1>
+    <form method="POST" action="/tuyenDung/<%=page._id%>">
+        <div class="form-group">
+            <p>Tên Công Ty:</p>
+            <input type="text" name="nameCty" class="form-control" value="<%= page.nameCty %> " placeholder="Tên Công Ty" required />
+        </div>
+        <div class="form-group">
+            <p>Vị trí tuyển dụng:</p>
+            <input type="text" name="viTri" class="form-control" value="<%= page.viTri %> " placeholder="Vị trí tuyển dụng" required />
+        </div>
+        <div class="form-group">
+            <p>Yêu cầu:</p>
+            <textarea name="yeuCau" placeholder="Yêu cầu công việc" class="form-control" minlength="5" required><%= page.yeuCau %></textarea>
+        </div>
+        <div class="form-group">
+            <p>Mô tả:</p>
+            <textarea name="moTa" placeholder="Mô tả công việc" class="form-control" minlength="5" required><%= page.moTa %></textarea>
+        </div>
+        <div class="form-group">
+            <p>Sđt:</p>
+            <input type="number" name="sdt" class="form-control" value="<%= page.sdt %>" placeholder="Số điện thoại" required />
+        </div>
+        <button type="submit">Cập nhật</button>
+    </form>
+</div>
+
+<%- include("../_layouts/footer") %>
