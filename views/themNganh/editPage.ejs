@@ -5,11 +5,31 @@
     <form method="POST" action="/themNganh/<%=page._id%>">
         <div class="form-group">
             <p>Tên ngành:</p>
-            <input type="text" value="<%= page.nameNganh %> " name="nameNganh" class="form-control" placeholder="Tên Ngành" required />
+            <input type="text" value="<%=page.nameNganh%>" name="nameNganh" class="form-control" placeholder="Tên Ngành" required />
         </div>
         <div class="form-group">
-            <p>giới thiệu:</p>
-            <input type="text" value="<%= page.info %>" name="info" class="form-control" placeholder="Giới thiệu" required />
+            <p>Cấp độ:</p>
+            <select name="mucDo">
+                <option value="thap">Thấp</option>
+                <option value="trungBinh">Trung Bình</option>
+                <option value="cao">Cao</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Tóm gọn:</p>
+            <input type="text" value="<%= page.info %>" name="info" class="form-control" placeholder="tóm gọn" required />
+        </div>
+        <div class="form-group">
+            <p>Giới thiệu:</p>
+            <textarea type="text" name="information" class="form-control" placeholder="Giới thiệu" required ><%= page.information %> </textarea>
+        </div>
+        <div class="form-group">
+            <p>Lương thấp nhất:</p>
+            <input type="number" value="<%= page.luongThap %>" name="luongThap" class="form-control" placeholder="Lương thấp nhất" required />
+        </div>
+        <div class="form-group">
+            <p>Lương cao nhất:</p>
+            <input type="number" value="<%= page.luongCao %>" name="luongCao" class="form-control" placeholder="Lương cao nhất" required />
         </div>
         <div class="form-group">
             <p>hình ảnh:</p>

@@ -28,6 +28,10 @@ const PageSchema = mongoose.Schema({
         type: Number,
         required: true
     },
+    sdt: {
+        type: Number,
+        required: true
+    },
     time: {
         type: String,
         required: true

@@ -34,6 +34,7 @@
         <th>Vị trí</th>
         <th>Giới thiệu</th>
         <th>Mức lương</th>
+        <th>Số điện thoại</th>
         <th colspan="2">Thời gian làm việc</th>
       </tr>
     </thead>
@@ -44,6 +45,7 @@
                 <td> <%= index.viTri %>  </td>
                 <td> <%= index.gioiThieu %>  </td>
                 <td> <%= index.luong %>  </td>
+                <td> <%= index.sdt %>  </td>
                 <td> <%= index.time %>  </td>
                 <td> <a href="/timViec/<%=index._id%>/edit">Sửa</a> <a href="/timViec/<%=index._id%>/delete">Xóa</a> </td>
             </tr>
@@ -55,8 +57,7 @@
     <thead>
       <tr>
         <th>Ngành nghề</th>
-        <th>Thông tin</th>
-        <th colspan="2">hình ảnh</th>
+        <th colspan="2">Thông tin</th>
       </tr>
     </thead>
     <tbody>
@@ -64,7 +65,6 @@
             <tr>
                 <td> <%= index.nameNganh %></td>
                 <td> <%= index.info %>  </td>
-                <td> <%= index.imgSrc %>  </td>
                 <td> <a href="/themNganh/<%=index._id%>/edit">Sửa</a> <a href="/themNganh/<%=index._id%>/delete">Xóa</a> </td>
             </tr>
         <% }) %> 

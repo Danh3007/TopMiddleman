@@ -5,19 +5,23 @@
     <form method="POST" action="/timViec/<%=page._id%>">
         <div class="form-group">
             <p>Tên:</p>
-            <input type="text" value="<%= page.myName %> " name="myName" class="form-control" placeholder="Họ và tên" required />
+            <input type="text" value="<%= page.myName %>" name="myName" class="form-control" placeholder="Họ và tên" required />
         </div>
         <div class="form-group">
             <p>Vị trí tuyển dụng:</p>
-            <input type="text" value="<%= page.viTri %> " name="viTri" class="form-control" placeholder="Vị trí tuyển dụng" required />
+            <input type="text" value="<%= page.viTri %>" name="viTri" class="form-control" placeholder="Vị trí tuyển dụng" required />
         </div>
         <div class="form-group">
             <p>Giới thiệu bản thân:</p>
-            <textarea name="gioiThieu" placeholder="Giới thiệu bản thân" class="form-control" minlength="5" required><%= page.gioiThieu %> </textarea>
+            <textarea name="gioiThieu" placeholder="Giới thiệu bản thân" class="form-control" minlength="5" required><%= page.gioiThieu %></textarea>
         </div>
         <div class="form-group">
             <p>Mức lương Tối thiểu:</p>
             <input type="number" value="<%= page.luong %>" name="luong" placeholder="Nhập mức lương tối thiểu" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <p>Điện thoại liên hệ:</p>
+            <input type="number" value="<%= page.sdt %>" name="sdt" placeholder="Nhập số điện thoại" class="form-control" required />
         </div>
         <div class="form-group">
             <p>Thời gian làm việc:</p>

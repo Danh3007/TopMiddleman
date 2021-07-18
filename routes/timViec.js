@@ -24,6 +24,7 @@ router.post("/signUp",(req,res) => {
         viTri:req.body.viTri,
         gioiThieu:req.body.gioiThieu,
         luong:req.body.luong,
+        sdt:req.body.sdt,
         time:req.body.time
     })
     TimViec.save()
