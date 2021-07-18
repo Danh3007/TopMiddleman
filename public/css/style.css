@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 header {
@@ -29,12 +29,12 @@ header {
 }
 
 .btn {
-    background-color: rgb(255, 255, 255);
+    background-color: #f5f5f5;
     color: #65768e;
 }
 
 header.sticky {
-    background: rgb(255, 255, 255);
+    background: #f5f5f5;
     padding: 5px 0px;
 }
 
