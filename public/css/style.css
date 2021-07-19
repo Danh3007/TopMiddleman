@@ -437,3 +437,7 @@ header.sticky .navbar a {
     width: 99.4%;
     margin-left: 4px;
 }
+.error
+{
+    color: red;
+}

@@ -12,25 +12,26 @@ router.get("/logout",(req,res)=>{
 })
 
 router.get('/register', (req, res) => {
-    res.render("account/register")
+    res.render("account/register",{              
+        message:false
+    })
 })
 router.get('/login', (req, res, next) => {
     res.render("account/login")
 })
 router.post('/register', (req, res, next) => {
-    if (req.body.password==req.body.password2) {
-        Account.findOne({username:req.body.username}, function(err, account) {
-            if(account) {
-                res.redirect("/register")
-            } else {
-                const tk = new Account(req.body)
-                tk.save()
-                res.redirect("/login")
-            }
-        })
-    } else {
-        res.redirect("/register")
-    }
+    Account.findOne({ username: req.body.username }, function (err, account) {
+        if (account) {
+            res.render("account/register",{ 
+                message:true
+            })
+        } else {
+            const tk = new Account(req.body)
+            tk.save()
+            res.clearCookie("loi");
+            res.redirect("/login")
+        }
+    })
 })
 
 router.post('/user', (req, res, next) => {
