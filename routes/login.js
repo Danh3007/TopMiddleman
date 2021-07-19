@@ -17,7 +17,9 @@ router.get('/register', (req, res) => {
     })
 })
 router.get('/login', (req, res, next) => {
-    res.render("account/login")
+    res.render("account/login",{
+        mess:false
+    })
 })
 router.post('/register', (req, res, next) => {
     Account.findOne({ username: req.body.username }, function (err, account) {
@@ -42,7 +44,9 @@ router.post('/user', (req, res, next) => {
             res.cookie('userloginNumber', account.mission);
             res.redirect("/")
         } else {
-            res.redirect("/")
+            res.render("account/login",{
+                mess:true
+            })
         }
     })    
 })
