@@ -1,9 +1,9 @@
 <%- include("../_layouts/header") %>
 
     <div class="row">
-        <h1>Register 1.1</h1>
+        <h1>Register</h1>
         <% if (message==true){%>
-            <h3> <span class="error">Đã tồn tại user</span></h3>
+            <h5> <span class="error">Đã tồn tại user</span></h5>
             <%}%>
                 <form method="POST" action="/register" role="form" name="registration">
                     <div class="form-group">
@@ -46,7 +46,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        const emailRegexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         checkCookie()
         function getCookie(cname) {
             let name = cname + "=";
@@ -78,6 +78,7 @@
             let p = document.getElementById("password").value;
             let p2 = document.getElementById("password2").value;
             if (p != p2) {
+                document.getElementById("spassword2").style.display = ""
                 document.getElementById("spassword2").innerHTML = "Mật khẩu không khớp"
                 console.log("da check pass")
                 return false
@@ -91,11 +92,11 @@
             console.log("checking email")
             console.log(valid)
             if (valid == false) {
+                document.getElementById("semail").style.display = '';
                 document.getElementById("semail").innerHTML = "Vui lòng nhập đúng email"
                 return false
             }
             document.getElementById("semail").style.display = 'none';
-            console.log("True email")
             return true
         }
         $(document).ready(function () {
@@ -131,8 +132,12 @@
                 else {
                     $("#spassword").hide()
                 }
-                checkPassword()
-                checkEmail()
+                if (checkPassword()==false){
+                    return false
+                }
+                if(checkEmail()==false){
+                    return false
+                }
             });
         })
     </script>
