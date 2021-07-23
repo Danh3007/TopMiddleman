@@ -1,7 +1,18 @@
 const express = require('express')
 const router = express.Router()
+const multer = require("multer")
 
 const Page_Nganh = require("../models/ThemNganh")
+
+const storage=multer.diskStorage({
+    destination: (req,file,cb)=>{
+        cb(null,"./public/images")
+    },
+    filename: (req,file,cb)=>{
+        cb(null,file.originalname)
+    }
+})
+const upload=multer({storage:storage})
 
 router.get('/', (req, res, next) => {
     if (req.cookies.userloginNumber == null || req.cookies.userloginNumber == "") {
@@ -12,7 +23,7 @@ router.get('/', (req, res, next) => {
         })
     }
 })
-router.post("/signUp", (req, res, next) => {
+router.post("/signUp", upload.single("imgSrc"), (req, res, next) => {
     Page_Nganh.findOne({ nameNganh: req.body.nameNganh }, function (err, nganh) {
         if (nganh) {
             res.render("themNganh/themNganh",{
