@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon --inspect .",
     "start": "node ."
   },
   "repository": {
