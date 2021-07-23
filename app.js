@@ -5,7 +5,6 @@ const route = require("./routes/index")
 const cookieParser = require('cookie-parser')
 
 const app = express()
-const port = 3000
 
 app.use(cookieParser())
 app.use((req,res,next)=> {
@@ -70,4 +69,6 @@ db.once("open", () => {
 })
 
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(process.env.PORT, () => function(){
+    
+})
