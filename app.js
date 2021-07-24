@@ -69,6 +69,6 @@ db.once("open", () => {
 })
 
 
-app.listen(process.env.PORT, () => function(){
-    
+app.listen(3000, () => function(){
+
 })
